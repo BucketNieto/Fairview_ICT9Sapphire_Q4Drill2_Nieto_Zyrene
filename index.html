@@ -6,15 +6,17 @@
     <title>Q4 Drill 2</title>
 </head>
 <body>
+    <h1>Heat index checker</h1>
 
   <button class="btn" onclick="Index()">Check Index</button>
+
     <script>
                  function Index(){
-        var temp = document.getElementById("").value;
+        var temp = document.getElementById("Heatindex").value;
          var Heatindex;
          var humid;
 
-          var status = "";
+          var status = "true";
        HeatIndex = temperature + (0.33 * humidity) - 4;
           switch (true){
             case(Heatindex <= "27"):rank
