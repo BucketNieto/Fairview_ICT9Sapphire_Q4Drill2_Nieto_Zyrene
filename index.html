@@ -7,51 +7,52 @@
 </head>
 <body>
     <h1>Heat index checker</h1>
-<input type="text" id="HI" class="form-control" placeholder="Input heatindex">
-  <button class="btn" onclick="Index()">Check Index</button>
+<input type="text" id="temp" class="form-control" placeholder="temperature">
+    <input type="text" id="humid" class="form-control" placeholder="humidity">
+    <button class="btn" onclick="checkHI()">Check Index</button>
 
     <script>
-                 function checkHI(){
-        var temp = document.getElementById("HI").value;
-         var Heatindex;
-         var humid;
+        function checkHI() {
+            var temperature = document.getElementById("temp").value;
+            var humidity = document.getElementById("humid").value;
+            
+            var status = "";
 
-          var status = "";
-       HeatIndex = temperature + (0.33 * humidity) - 4;
+        var HeatIndex = temperature + (0.33 * humidity) - 4;
           switch (true){
-            case(HI <= "27"):rank
+            case(HeatIndex <= "27"):
             status = "Cool/Comfortable";
             break;
-            case(HI === "32"):rank
+            case(HeatIndex >= "28"):
             status = "Warm";
             break;
-            case(HI === "37"):rank
+            case(HeatIndex >= "33"):
             status = "Hot";
             break;
-             case(HI === "41"):rank
+             case(HeatIndex >= "38"):
             status = "Very Hot";
             break;
-            case(HI >= "42"):rank
+            case(HeatIndex >= "42"):
             status = "Extreme heat";
             break;
           }
           alert("Heat Index:" + HeatIndex.toFixed (1) + "\n" + "Status" + status);
           } 
-
+        
           switch (true){
-            case(humid <= "50"):rank
+            case(humid <= "50"):
             status = "Cool/Comfortable";
             break;
-            case(humid === "60"):rank
+            case(humid >= "40"):
             status = "Warm";
             break;
-            case(humid === "70"):rank
+            case(humid >= "50"):
             status = "Hot";
             break;
-             case(humid === "80"):rank
+             case(humid >= "60"):
             status = "Very Hot";
             break;
-            case(humid >= "100"):rank
+            case(humid >= "100"):
             status = "Extreme heat";
             break;
           }
