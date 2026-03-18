@@ -11,27 +11,27 @@
   <button class="btn" onclick="Index()">Check Index</button>
 
     <script>
-                 function Index(){
-        var temp = document.getElementById("Heatindex").value;
+                 function checkHI(){
+        var temp = document.getElementById("HI").value;
          var Heatindex;
          var humid;
 
-          var status = "true";
+          var status = "";
        HeatIndex = temperature + (0.33 * humidity) - 4;
           switch (true){
-            case(Heatindex <= "27"):rank
+            case(HI <= "27"):rank
             status = "Cool/Comfortable";
             break;
-            case(Heatindex === "32"):rank
+            case(HI === "32"):rank
             status = "Warm";
             break;
-            case(Heatindex === "37"):rank
+            case(HI === "37"):rank
             status = "Hot";
             break;
-             case(Heatindex === "41"):rank
+             case(HI === "41"):rank
             status = "Very Hot";
             break;
-            case(Heatindex >= "42"):rank
+            case(HI >= "42"):rank
             status = "Extreme heat";
             break;
           }
