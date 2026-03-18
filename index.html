@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4 Drill 2</title>
+</head>
+<body>
+
+  <button class="btn" onclick="Index()">Check Index</button>
+    <script>
+                 function Index(){
+        var temp = document.getElementById("").value;
+         var Heatindex;
+         var humid;
+
+          var status = "";
+       HeatIndex = temperature + (0.33 * humidity) - 4;
+          switch (true){
+            case(Heatindex <= "27"):rank
+            status = "Cool/Comfortable";
+            break;
+            case(Heatindex === "32"):rank
+            status = "Warm";
+            break;
+            case(Heatindex === "37"):rank
+            status = "Hot";
+            break;
+             case(Heatindex === "41"):rank
+            status = "Very Hot";
+            break;
+            case(Heatindex >= "42"):rank
+            status = "Extreme heat";
+            break;
+          }
+          alert("Heat Index:" + HeatIndex.toFixed (1) + "\n" + "Status" + status);
+          } 
+
+          switch (true){
+            case(humid <= "50"):rank
+            status = "Cool/Comfortable";
+            break;
+            case(humid === "60"):rank
+            status = "Warm";
+            break;
+            case(humid === "70"):rank
+            status = "Hot";
+            break;
+             case(humid === "80"):rank
+            status = "Very Hot";
+            break;
+            case(humid >= "100"):rank
+            status = "Extreme heat";
+            break;
+          }
+    </script>
+</body>
+</html>
